@@ -19,13 +19,14 @@
 
         .window {
             background-color: #fff;
-            width: 800px; /* 擴大視窗寬度 */
+            width: 800px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; /* 讓內容在小螢幕時換行 */
         }
 
         .left, .right {
@@ -59,14 +60,14 @@
             margin-top: 20px;
         }
 
-        #first{
+        #first {
             color: #870604;
             font-size: 70px;
             margin-top: 10px;
             white-space: nowrap;
         }
 
-        #second{
+        #second {
             color: #870604;
             font-size: 30px;
             margin-top: 10px;
@@ -81,12 +82,13 @@
             font-weight: bold;
         }
 
-        img{
+        img {
             width: 50px;
             height: 50px;
             margin-left: 10px;
             margin-top: -10px;
         }
+
         #account, #password {
             width: 100%;
             padding: 15px;
@@ -94,8 +96,50 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-    </style>
 
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .window {
+                width: 90%; /* 縮小整體寬度 */
+                flex-direction: column; /* 改為垂直排列 */
+            }
+
+            .left, .right {
+                width: 100%; /* 左右區塊各佔滿寬度 */
+                margin-bottom: 20px; /* 增加區塊間距 */
+            }
+
+            button {
+                padding: 10px 60px; /* 調整按鈕大小 */
+            }
+
+            #first {
+                font-size: 50px; /* 縮小標題字體 */
+            }
+
+            #second {
+                font-size: 20px; /* 縮小副標題字體 */
+            }
+
+            #link {
+                font-size: 20px; /* 縮小連結字體 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #first {
+                font-size: 40px; /* 進一步縮小標題字體 */
+            }
+
+            #second {
+                font-size: 18px; /* 進一步縮小副標題字體 */
+            }
+
+            button {
+                padding: 10px 40px; /* 再次調整按鈕大小 */
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="window">
