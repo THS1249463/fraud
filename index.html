@@ -26,7 +26,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* 讓內容在小螢幕時換行 */
+            flex-wrap: wrap;
         }
 
         .left, .right {
@@ -97,57 +97,56 @@
             border-radius: 5px;
         }
 
-        /* 響應式設計 */
         @media (max-width: 768px) {
             .window {
-                width: 90%; /* 縮小整體寬度 */
-                flex-direction: column; /* 改為垂直排列 */
+                width: 90%;
+                flex-direction: column;
             }
 
             .left, .right {
-                width: 100%; /* 左右區塊各佔滿寬度 */
-                margin-bottom: 20px; /* 增加區塊間距 */
+                width: 100%;
+                margin-bottom: 20px;
             }
 
             button {
-                padding: 10px 60px; /* 調整按鈕大小 */
+                padding: 10px 60px;
             }
 
             #first {
-                font-size: 50px; /* 縮小標題字體 */
+                font-size: 50px;
             }
 
             #second {
-                font-size: 20px; /* 縮小副標題字體 */
+                font-size: 20px;
             }
 
             #link {
-                font-size: 20px; /* 縮小連結字體 */
+                font-size: 20px;
             }
 
             #account, #password {
-                width: 90%; /* 縮小輸入框寬度 */
-                font-size: 14px; /* 調整字體大小 */
+                width: 90%;
+                font-size: 14px;
             }
         }
 
         @media (max-width: 480px) {
             #first {
-                font-size: 40px; /* 進一步縮小標題字體 */
+                font-size: 40px;
             }
 
             #second {
-                font-size: 18px; /* 進一步縮小副標題字體 */
+                font-size: 18px;
             }
 
             button {
-                padding: 10px 40px; /* 再次調整按鈕大小 */
+                padding: 10px 40px;
             }
 
             #account, #password {
-                width: 100%; /* 進一步縮小輸入框寬度 */
-                font-size: 12px; /* 再次調整字體大小 */
-                padding: 10px; /* 減少內邊距 */
+                width: 100%;
+                font-size: 12px;
+                padding: 10px;
             }
         }
     </style>
@@ -155,19 +154,19 @@
 <body>
 <div class="window">
     <div class="left">
-        <h1 id = "first">ilearn <img src="img.png" alt="books"> </h1>
-        <h1 id = "second">逢甲大學/Feng Chia University</h1>
-        <input id = "account" type="text" placeholder="帳號" required>
-        <input id = "password" type="password" placeholder="密碼" required>
-        <a href="link.html">
-            <button id = "login" type="submit" disabled>登入</button>
-        </a>
+        <h1 id="first">ilearn <img src="img.png" alt="books"> </h1>
+        <h1 id="second">逢甲大學/Feng Chia University</h1>
+        <input id="account" type="text" placeholder="帳號" required>
+        <input id="password" type="password" placeholder="密碼" required>
+        <button id="login" type="button" disabled>登入</button>
     </div>
     <div class="right">
         <h2>請使用NID帳號/密碼登入平台。</h2>
-        <h2>欲變更NID密碼，請連結至<a href="link2.html" id = "link">NID</a></h2>
+        <h2>欲變更NID密碼，請連結至<a href="link2.html" id="link">NID</a></h2>
     </div>
 </div>
-<script src="index.js"></script>
+
+<script src = "index.js"></script>
+
 </body>
 </html>
