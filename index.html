@@ -90,11 +90,103 @@
         }
 
         #account, #password {
-            width: 100%;
+            width: 80%;
             padding: 15px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        select#language-select {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            margin-top: 20px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        select#language-select:focus {
+            border-color: #870604;
+            box-shadow: 0 0 5px rgba(135, 6, 4, 0.2);
+            outline: none;
+        }
+
+        select#language-select option {
+            background: #fff;
+            color: #333;
+        }
+
+        /* 選單下拉樣式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            margin-top: 20px;
+        }
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 16px;
+            font-size: 16px;
+            color: #333;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .dropdown-toggle:focus {
+            border-color: #870604;
+            box-shadow: 0 0 5px rgba(135, 6, 4, 0.2);
+            outline: none;
+        }
+        .caret {
+            border-top: 6px solid #333;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            height: 0;
+            width: 0;
+            margin-left: 8px;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+        .dropdown.open .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            background: #fff;
+            transition: background 0.2s;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f0f0;
+        }
+
+        .lang-cookie-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         @media (max-width: 768px) {
@@ -125,7 +217,7 @@
             }
 
             #account, #password {
-                width: 90%;
+                width: 60%;
                 font-size: 14px;
             }
         }
@@ -163,6 +255,15 @@
     <div class="right">
         <h2>請使用NID帳號/密碼登入平台。</h2>
         <h2>欲變更NID密碼，請連結至<a href="link2.html" id="link">NID</a></h2>
+        <div class="lang-cookie-row">
+            <select id="language-select" style="margin-top: 30px; font-size: 15px; padding: 5px 10px; border-radius: 8px;">
+                <option value="zh_tw">正體中文 ‎(zh_tw)‎</option>
+                <option value="en">English ‎(en)‎</option>
+            </select>
+            <a href="#" id="cookie-info" style="display:block; margin-top:15px; color:#870604; font-size:16px; text-decoration:underline; cursor:pointer;">
+                cookie使用資訊
+            </a>
+        </div>
     </div>
 </div>
 
