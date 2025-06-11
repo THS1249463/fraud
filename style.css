@@ -217,6 +217,7 @@ select#language-select option {
     }
 }
 
+
 @media (max-width: 480px) {
     #first {
         font-size: 40px;
